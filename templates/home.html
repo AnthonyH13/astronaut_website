@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
-    <meta charset="utf-8">
-    <title>NASA Astronauts</title>
-  </head>
-  <body>
-    <ul class="nav">
-      <div class="logo">
-        <img src="/Users/anthony/Desktop/astronaut_website/images/nasa_logo.png" alt="logo">
-      </div>
-      <div class="container">
-        <li title="signup">Signup</li>
-        <li title="analytics">Analytics</li>
-        <li title="about">About</li>
-        <li title="home">Home</li>
-      </div>
+{% extends "layout.html" %}
+{% block content %}
     </ul>
     <div class="container-fluid billboard">
       <h1> Do You Want To Be An Astronaut?!</h1>
       <div class="button">
-          <a href="/Users/anthony/Desktop/Web:dev/IRH_realestate/info.html" class="btn btn-one"> Get Started </a>
+          <a href={{link}} class="btn btn-one"> Get Started </a>
       </div>
     </div>
-  </body>
-</html>
+{% endblock content %}

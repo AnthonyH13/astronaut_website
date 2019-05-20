@@ -67,7 +67,7 @@ img{
 
 .nav li{
   float: right;
-  padding: 15px;
+  padding: 25px;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-size: 1.4em;
@@ -76,7 +76,7 @@ img{
 
 .nav li:hover{
   cursor: pointer;
-  border: 1px solid white;
+  border: .5px solid white;
 }
 
 .container{
