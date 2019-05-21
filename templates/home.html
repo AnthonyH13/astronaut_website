@@ -1,10 +1,48 @@
-{% extends "layout.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+    <meta charset="utf-8">
+    {% if title %}
+        <title>NASA Astronauts - {{ title }}</title>
+    {% else %}
+        <title>NASA Astronauts</title>
+    {% endif %}
+  </head>
+  <body>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/home">NASA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+
+            </div>
+        <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/home">Home</a>
+              <a class="nav-item nav-link" href="/about">About</a>
+              <a class="nav-item nav-link" href="/analytics">Analytics</a>
+              <a class="nav-item nav-link" href="/signup">Register</a>
+              <a class="nav-item nav-link" href="/login">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     </ul>
     <div class="container-fluid billboard">
       <h1> Do You Want To Be An Astronaut?!</h1>
       <div class="button">
-          <a href={{link}} class="btn btn-one"> Get Started </a>
+          <a class="nav-item nav-link" href="/signup" class="btn btn-one"> Get Started </a>
       </div>
     </div>
-{% endblock content %}
+  </body>
+</html>
