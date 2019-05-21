@@ -2,29 +2,29 @@
 from flask import Flask, render_template, url_for
 from signup import RegistrationForm, LoginForm
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 #json of posts thatll go on the about.html page
 posts = [
     {
-        'author': 'Unknown',
-        'title': 'Moon Mission',
-        'content': 'fafbdskfkjdshfjkhasdkjfhsdhf',
-        'date_posted': 'June 1st, 2018'
+        'author': 'John Uri',
+        'title': 'NASA Astronaut Candidates',
+        'content': "The term astronaut candidate refers to individuals who have been selected by NASA as candidates for the NASA astronaut corps and are currently undergoing a candidacy training program at the Johnson Space Center. The newest class of 2018 astronaut candidates were announced June 7, 2018.",
+        'date_posted': 'June 16th, 2018'
     },
     {
-        'author': 'Unknown',
-        'title': 'Mars Mission',
-        'content': 'fafbdskfkjdshfjkhasdkjfhsdhf',
-        'date_posted': 'May 1st, 2019'
+        'author': 'Danielle Sempsrott',
+        'title': 'Astronaut Selection and Training',
+        'content': 'Following the preliminary screening of applications, a week-long process of personal interviews, medical screening, and orientation are required for both civilian and military applicants under final consideration. Once final selections have been made, all applicants are notified of the outcome. Selected applicants are designated Astronaut Candidates and are assigned to the Astronaut Office at the Johnson Space Center (JSC) in Houston, Texas. ',
+        'date_posted': 'May 15th, 2011'
     }
 
 ]
 
 #route to home page
-@app.route("/home")
+@app.route("/home", methods=['GET', 'POST'])
 def home():
-    return render_template("home.html", link="/Users/anthony/Desktop/astronaut_website/templates/signup.html")
+    return render_template("home.html")
 
 #route to article page
 @app.route("/about")
