@@ -1,12 +1,12 @@
 body {
-  background-image: url(earth.jpeg);
+  background-image: url(milky_way.jpeg);
   height: 100%;
   color: #333333;
   margin-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  color: rgb(57, 72, 172);
+  color: white;
 }
 
 .billboard{
@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .billboard h1{
+  color: black;
   font-family: "Roboto", sans-serif;
   line-height: 0.01em;
   font-size: 5em;
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button a{
-  color: rgb(57, 72, 172);
+  color: black;
 }
 
 .container img{
@@ -48,8 +49,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button{
-  padding: 15px 10px;
-  margin-top: 5%;
+  padding: 12px 8px;
+  margin-top: 3%;
   font-size: 12px;
   color: rgb(57, 72, 172);
   font-family: 'Open Sans', sans-serif;
@@ -58,7 +59,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button:hover{
-  background-color: rgb(57, 72, 172);
+  border: 1px solid white;
+  background-color: black;
 }
 
 .bg-steel {
@@ -76,6 +78,11 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 50px;
 }
 
+.navbar{
+    background-image: url(earth.jpeg);
+
+}
+
 .site-header .navbar-nav .nav-link {
   color: rgb(57, 72, 172);
   font-size: 25px;
@@ -91,8 +98,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .content-section {
+  color: white;
   margin-top: 100px;
-  background: white;
+  background: black;
   padding: 10px 20px;
   border: 1px solid rgb(230, 55, 24);
   border-radius: 3px;
@@ -100,7 +108,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .article-title {
-  color: #444444;
+  color: white;
 }
 
 a.article-title:hover {
@@ -147,5 +155,15 @@ a.article-title:hover {
 }
 
 .list-group-item{
+  background-color: black;
   color: rgb(57, 72, 172);
+}
+.media-body img{
+  width: 700px;
+  height: 600px;
+}
+
+.media-body .graph{
+  height: 600px;
+  width: 700px;
 }

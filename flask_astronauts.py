@@ -1,10 +1,15 @@
-#importing flask
+#importing flask, database, and forms
 from flask import Flask, render_template, url_for
 from signup import RegistrationForm, LoginForm
 
+#passing app name & path to images
 app = Flask(__name__, static_url_path='/static')
+
+#key for password gen & database
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-#json of posts thatll go on the about.html page
+
+
+#json of posts that'll go on the about.html page
 posts = [
     {
         'author': 'John Uri',
@@ -45,6 +50,7 @@ def register():
         return redirect(url_for('home'))
     return render_template('signup.html', title='Register', form=form)
 
+#route to login page
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -55,6 +61,7 @@ def login():
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Login', form=form)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
